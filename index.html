@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/script.js" defer></script>
+    <title>Time tracking dashboard</title>
+</head>
+<body>
+
+    <main class="main">
+
+        <div class="profile__container">
+
+            <section class="profile">
+            <img class="profile__img" src="/images/image-jeremy.png" alt="">
+            <div class="profile__content">
+                <p class="profile__text">Report for</p>
+                <h2 class="profile__title">Jeremy Robson</h2>
+            </div>
+            </section>
+
+            <section class="links">
+            <ul class="links__time">
+                <li class="links__li"><a class="links__btn" id="daily" >Daily</a></li>
+                <li class="links__li"><a class="links__btn" id="weekly" >Weekly</a></li>
+                <li class="links__li"><a class="links__btn" id="monthly" >Monthly</a></li>
+            </ul>
+            </section>
+        </div>
+
+        <div class="tracking__container">
+            <section class="tracking">
+                <img class="tracking__img" src="/images/icon-work.svg" alt="">
+    
+                <article class="tracking__content">
+                    <h3 class="tracking__title">Work</h3>
+                    <img class="tracking__ellipsis" src="/images/icon-ellipsis.svg" alt="">
+                    <h1 class="tracking__current" id="current-work"></h1>
+                    <h4 class="tracking__previous" id="previous-work"></h4>
+                </article>
+            </section>
+    
+            <section class="tracking tracking--play">
+                <img class="tracking__img" src="/images/icon-play.svg" alt="">
+    
+                <article class="tracking__content">
+                    <h3 class="tracking__title">Play</h3>
+                    <img class="tracking__ellipsis" src="/images/icon-ellipsis.svg" alt="">
+                    <h1 class="tracking__current" id="current-play"></h1>
+                    <h4 class="tracking__previous" id="previous-play"></h4>
+                </article>
+            </section>
+    
+            <section class="tracking tracking--study">
+                <img class="tracking__img" src="/images/icon-study.svg" alt="">
+    
+                <article class="tracking__content">
+                    <h3 class="tracking__title">Study</h3>
+                    <img class="tracking__ellipsis" src="/images/icon-ellipsis.svg" alt="">
+                    <h1 class="tracking__current" id="current-study"></h1>
+                    <h4 class="tracking__previous" id="previous-study"></h4>
+                </article>
+            </section>
+    
+            <section class="tracking tracking--exercice">
+                <img class="tracking__img" src="/images/icon-exercise.svg" alt="">
+    
+                <article class="tracking__content">
+                    <h3 class="tracking__title">Exercise</h3>
+                    <img class="tracking__ellipsis" src="/images/icon-ellipsis.svg" alt="">
+                    <h1 class="tracking__current" id="current-exercise"></h1>
+                    <h4 class="tracking__previous" id="previous-exercise"></h4>
+                </article>
+            </section>
+    
+            <section class="tracking tracking--social">
+                <img class="tracking__img" src="/images/icon-social.svg" alt="">
+    
+                <article class="tracking__content">
+                    <h3 class="tracking__title">Social</h3>
+                    <img class="tracking__ellipsis" src="/images/icon-ellipsis.svg" alt="">
+                    <h1 class="tracking__current" id="current-social"></h1>
+                    <h4 class="tracking__previous" id="previous-social"></h4>
+                </article>
+            </section>
+    
+            <section class="tracking tracking--self-care">
+                <img class="tracking__img" src="/images/icon-self-care.svg" alt="">
+    
+                <article class="tracking__content">
+                    <h3 class="tracking__title">Self Care</h3>
+                    <img class="tracking__ellipsis" src="/images/icon-ellipsis.svg" alt="">
+                    <h1 class="tracking__current" id="current-self-care"></h1>
+                    <h4 class="tracking__previous" id="previous-self-care"></h4>
+                </article>
+            </section>
+        </div>
+
+    </main>
+    
+</body>
+</html>

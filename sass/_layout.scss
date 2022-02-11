@@ -1,0 +1,259 @@
+@use "base" as *;
+@use "abstract" as *;
+
+body
+{
+    font-family: $font-primary;
+    background-color: $very-dark-blue;
+}
+
+.main
+{
+    margin: 4em 1em;
+
+    @include responsive(portatil)
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 1.5em;
+        margin: 4em 5em
+    }
+}
+
+.profile__container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.profile
+{
+    background-color: $blue;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 2em;
+    border-radius: 15px;
+    transform: translateY(1.5em);
+
+    @include responsive(portatil)
+    {
+        padding: 2em 1.5em;
+        display: grid;
+        grid-template-columns: 1fr;
+        transform: translateY(1.8em);
+    }
+
+    &__img
+    {
+        width: 4.5rem;
+        border: 3px solid #fff;
+        border-radius: 50%;
+
+        @include responsive(portatil)
+        {
+            width: 4rem;
+        }
+    }
+
+    &__content
+    {
+       width: 185px;
+       line-height: .5;
+    }
+
+    &__text
+    {
+        color: $pale-blue;
+
+        @include responsive(portatil)
+        {
+            font-size: .7em;
+            transform: translateY(1.7em);
+        }
+    }
+
+    &__title
+    {
+        color: #fff;
+        font-weight: map-get($weights, light);
+
+        @include responsive(portatil)
+        {
+            font-size: 2em;
+            line-height: 1.2;
+        }
+    }
+}
+
+.links
+{
+    background-color: $dark-blue;
+    border-radius: 0 0 15px 15px;
+    display: grid;
+    justify-content: center;
+    padding: 2em 0 .5em 0;
+
+    @include responsive(portatil)
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    &__time
+    {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    &__li
+    {
+        display: inline-block;
+        margin: 0 1.6em;
+
+        @include responsive(portatil)
+        {
+            display: block;
+            padding: .5em;
+        }
+    }
+
+    &__btn
+    {
+        text-decoration: none;
+        color: rgba($color: #fff, $alpha: .5);
+        font-size: $size-primary;
+        cursor: pointer;
+
+        &:hover
+        {
+            color: #fff;
+        }
+    }
+}
+
+.tracking__container
+{
+    @include responsive(portatil)
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0em 2em;
+        grid-column-end: 4;
+    }
+}
+
+.tracking
+{
+    margin-top: 2em;
+    background-color: $light-orange;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+
+    &__img
+    {
+        position: absolute;
+        right: 1em; top: -1em;
+
+        @include responsive(portatil)
+        {
+            width: 55px;
+            position: absolute;
+            top: -.3em;
+        }
+    }
+
+    &__content
+    {
+        background-color: $dark-blue;
+        transform: translateY(2em);
+        padding: .7em 1.8em;
+        border-radius: 15px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+
+        &:hover
+        {
+            background-color: hsl(235, 46%, 40%);
+        }
+
+        @include responsive(portatil)
+        {
+            padding: 1em 1.8em;
+        }
+    }
+
+    &__title
+    {
+        color: #fff;
+        font-weight: map-get($weights, medium);
+        font-size: $size-primary;
+    }
+
+    &__ellipsis
+    {
+        grid-column-end: 5;
+        transform: translateY(1.7em);
+        cursor: pointer;
+    }
+
+    &__current
+    {
+        color: #fff;
+        font-weight: map-get($weights, light);
+        transform: translateY(-1em);
+
+        @include responsive(portatil)
+        {
+            font-size: 2.5em;
+            margin-top: 1em;
+        }
+    }
+
+    &__previous
+    {
+        color: $pale-blue;
+        font-weight: map-get($weights, light);
+        grid-column-end: 4;
+        transform: translate(1.2em, -1.4em);
+
+        @include responsive(portatil)
+        {
+            margin-top: 1.8em;
+        }
+
+    }
+
+    &--play
+    {
+        background-color: $soft-blue;
+    }
+
+    &--study
+    {
+        background-color: $light-red;
+    }
+
+    &--exercice
+    {
+        background-color: $lime-green;
+    }
+
+    &--social
+    {
+        background-color: $violet;
+    }
+
+    &--self-care
+    {
+        background-color: $soft-orange;
+    }
+}
+
+.active
+{
+    color: #fff;
+}

@@ -1,0 +1,5 @@
+@mixin responsive($breakpoint) {
+    @if $breakpoint == portatil {
+        @media screen and (min-width: 1024px) { @content }
+    }
+}
